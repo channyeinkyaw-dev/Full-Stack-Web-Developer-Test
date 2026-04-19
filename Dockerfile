@@ -8,7 +8,8 @@ RUN composer install \
       --no-scripts \
       --no-interaction \
       --prefer-dist \
-      --optimize-autoloader
+      --optimize-autoloader \
+      --ignore-platform-reqs
 
 # Stage 2: Production image
 FROM php:8.2-apache
