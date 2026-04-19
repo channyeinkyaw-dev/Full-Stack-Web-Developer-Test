@@ -1,0 +1,82 @@
+.site-header {
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  right: 0;
+  bottom: auto;
+  left: 0;
+  height: var(--header-height);
+  color: var(--color-ink);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  height: var(--header-height);
+}
+
+.site-header__brand {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+.site-header__brand img {
+  width: 115px;
+  height: auto;
+}
+
+.site-header__nav {
+  display: block;
+}
+
+.site-header__list {
+  display: flex;
+  align-items: center;
+  gap: 43px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.site-header__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 40px;
+  color: var(--color-ink);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.7px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.site-header__chevron {
+  width: 0;
+  height: 0;
+  margin-top: 2px;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid currentColor;
+}
+
+.site-header__toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  margin-left: auto;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--color-ink);
+}
+
+.site-header__toggle-bar {
+  display: block;
+  width: 18px;
+  height: 2px;
+  margin: 4px auto;
+  background: currentColor;
+}

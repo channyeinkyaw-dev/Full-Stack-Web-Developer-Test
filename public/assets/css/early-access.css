@@ -1,0 +1,135 @@
+.early-access {
+  position: relative;
+  background: var(--color-hero);
+  overflow: hidden;
+}
+
+.early-access__top::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 1184px;
+  height: 343px;
+  background: linear-gradient(144.39deg, #E01A59 -32.66%, #460A48 71.03%);
+  opacity: 0.3;
+  -webkit-filter: blur(80px);
+  filter: blur(80px);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.early-access__top {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 84px 0 56px;
+}
+
+.early-access__inner {
+  position: relative;
+}
+
+.early-access__inner > h2 {
+  margin: 0 0 40px;
+  color: var(--color-ink);
+  font-size: 40px;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 1.2;
+}
+
+.early-access__inner > h2 span,
+.early-access__signup h3 span {
+  color: var(--color-muted);
+}
+
+.early-access__intro {
+  max-width: 1168px;
+  margin: 0 0 47px;
+  color: #eadbea;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 28px;
+}
+
+.product-tiles {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.product-tile {
+  display: grid;
+  grid-template-columns: 156px 1fr;
+  align-items: center;
+  gap: 28px;
+  min-height: 86px;
+  padding: 16px 32px;
+  border: 3.5px solid #431F43;
+  border-radius: 999px;
+  background: #190818;
+}
+
+.product-tile__status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  border-radius: 999px;
+  background: rgba(143, 97, 143, 0.34);
+  color: var(--color-muted);
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 0.6px;
+}
+
+.product-tile--released .product-tile__status {
+  background: #d9c1d9;
+  color: var(--color-page);
+}
+
+.product-tile__name {
+  display: grid;
+  color: var(--color-muted);
+  font-size: 19px;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  line-height: 1.1;
+}
+
+.product-tile__name strong {
+  color: var(--color-ink);
+  font-size: 21px;
+  font-weight: 900;
+  letter-spacing: 4px;
+}
+
+.product-tile__name strong span {
+  color: var(--color-muted);
+}
+
+.early-access__signup {
+  display: grid;
+  justify-items: center;
+  width: 100%;
+  padding: 40px 23px;
+  background: rgba(23, 6, 23, 0.30);
+}
+
+.early-access__signup h3 {
+  margin: 0 0 32px;
+  color: var(--color-ink);
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 34px;
+  text-align: center;
+}

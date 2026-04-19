@@ -1,0 +1,15 @@
+.site-footer {
+  display: none;
+}
+
+.site-footer__inner {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: 14px;
+  letter-spacing: 0.6px;
+}

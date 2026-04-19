@@ -1,0 +1,32 @@
+:root {
+  --color-page: #402640;
+  --color-hero: #2c0f29;
+  --color-panel: #8f618f;
+  --color-panel-deep: #30162f;
+  --color-ink: #ffffff;
+  --color-muted: #cfb3cf;
+  --color-soft: #b995b9;
+  --color-accent: #e01a59;
+  --color-accent-dark: #af0d43;
+  --color-gold: #c99f2e;
+  --color-mint: #65c7a8;
+  --color-blue: #005aa3;
+  --color-field: #ffffff;
+  --color-field-text: #431f43;
+
+  --font-display: "Gotham", "Montserrat", "Avenir Next", "Segoe UI", Arial, sans-serif;
+  --font-body: "Gotham", "Montserrat", "Avenir Next", "Segoe UI", Arial, sans-serif;
+
+  --container: 1170px;
+  --header-height: 40px;
+  --radius-pill: 80px;
+  --shadow-deep: 0 32px 80px rgba(19, 5, 19, 0.42);
+
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
+  --space-6: 72px;
+  --space-7: 104px;
+}

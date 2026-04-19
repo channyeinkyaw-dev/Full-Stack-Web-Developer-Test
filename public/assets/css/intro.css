@@ -1,0 +1,130 @@
+.intro {
+  position: relative;
+  z-index: 1;
+  height: 538px;
+  padding: 96px 0 0;
+  background: var(--color-hero);
+}
+
+/* Dark lower band — "Descriptions" area (274px from bottom) */
+.intro::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 274px;
+  background: rgba(23, 6, 23, 0.30);
+}
+
+/* Decorative gradient glow */
+.intro::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  left: 50%;
+  bottom: -34px;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 1184px;
+  height: 343px;
+  background: linear-gradient(144.39deg, #E01A59 -32.66%, #460A48 71.03%);
+  opacity: 0.3;
+  -webkit-filter: blur(80px);
+  filter: blur(80px);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.intro__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.intro__heading {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto 55px;
+  color: var(--color-ink);
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.intro__badge {
+  position: absolute;
+  right: -90px;
+  top: -48px;
+  width: 116px;
+  height: 116px;
+  transform: rotate(-15deg);
+  box-shadow: 0px 10px 30px 0px rgba(24, 24, 24, 0.20);
+  border-radius: 50%;
+}
+
+.intro__bullets {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0 0 79px;
+  list-style: none;
+}
+
+.intro__bullets li {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  color: #eadbea;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 28px;
+  white-space: nowrap;
+}
+
+/* Divider between items */
+.intro__bullets li + li {
+  border-left: 1px solid rgba(143, 97, 143, 0.48);
+}
+
+/* First item: right-side padding only — flush with container left edge */
+.intro__bullets li:first-child {
+  padding-left: 0;
+}
+
+/* Last item: left-side padding only — flush with container right edge */
+.intro__bullets li:last-child {
+  padding-right: 0;
+}
+
+.intro__bullets span {
+  margin-right: 10px;
+  color: var(--color-ink);
+  font-weight: 300;
+}
+
+.intro__body {
+  max-width: 1168px;
+}
+
+.intro__body p {
+  margin: 0;
+  color: #eadbea;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 28px;
+}
+
+.intro__body p + p {
+  margin-top: 26px;
+}
+
+.intro__body strong {
+  color: var(--color-ink);
+  font-weight: 800;
+}
