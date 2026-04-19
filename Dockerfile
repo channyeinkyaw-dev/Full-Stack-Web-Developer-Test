@@ -25,8 +25,8 @@ RUN apt-get update && apt-get install -y \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-# Enable Apache mod_rewrite (required by CodeIgniter routing)
-RUN a2enmod rewrite
+# Enable Apache modules: rewrite + setenvif (needed for Cloud Run HTTPS detection)
+RUN a2enmod rewrite setenvif
 
 # Point Apache document root at CodeIgniter's public/ directory
 ENV APACHE_DOCUMENT_ROOT=/var/www/html/public
@@ -45,6 +45,14 @@ RUN printf '<Directory /var/www/html/public>\n\
 </Directory>\n' > /etc/apache2/conf-available/ci4.conf && \
     a2enconf ci4
 
+# Cloud Run sits behind Google's HTTPS load balancer.
+# When the incoming request has X-Forwarded-Proto: https, tell PHP
+# that HTTPS is on so CodeIgniter generates correct https:// asset URLs.
+RUN printf '<IfModule mod_setenvif.c>\n\
+    SetEnvIf X-Forwarded-Proto "https" HTTPS=on\n\
+</IfModule>\n' > /etc/apache2/conf-available/cloudrun-proxy.conf && \
+    a2enconf cloudrun-proxy
+
 # Copy project source
 WORKDIR /var/www/html
 COPY . .
@@ -52,9 +60,14 @@ COPY . .
 # Copy pre-built vendor directory from the composer stage
 COPY --from=vendor /app/vendor ./vendor
 
-# Create a minimal .env for production (real secrets injected via Cloud Run env vars)
-RUN cp env .env && \
-    sed -i 's/# CI_ENVIRONMENT = production/CI_ENVIRONMENT = production/' .env
+# Create a minimal .env for production (real secrets injected via Cloud Run env vars).
+# APP_BASE_URL can be passed as a Cloud Run env var (via cloudbuild.yaml substitution).
+# If set, it overrides CI4's auto-detection; if empty, CI4 auto-detects from headers.
+COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+RUN chmod +x /usr/local/bin/docker-entrypoint.sh && \
+    cp env .env && \
+    sed -i 's/# CI_ENVIRONMENT = production/CI_ENVIRONMENT = production/' .env && \
+    sed -i 's|# app.baseURL = .*|app.baseURL = ""|' .env
 
 # Ensure writable/ directories exist and are owned by www-data
 RUN mkdir -p writable/cache writable/logs writable/session writable/uploads && \
@@ -69,4 +82,5 @@ RUN sed -i "s/Listen 80/Listen \${PORT}/" /etc/apache2/ports.conf && \
 
 EXPOSE 8080
 
+ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
 CMD ["apache2-foreground"]
