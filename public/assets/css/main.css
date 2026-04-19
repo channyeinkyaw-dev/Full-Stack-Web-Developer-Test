@@ -47,7 +47,6 @@ input {
   max-width: var(--container);
   margin-right: auto;
   margin-left: auto;
-  /* Override Bootstrap grid's default gutter padding */
   padding-right: 0;
   padding-left: 0;
 }

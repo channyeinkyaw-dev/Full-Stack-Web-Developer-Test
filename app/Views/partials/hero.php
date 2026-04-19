@@ -60,8 +60,7 @@ $hasArtwork = ! empty($hero['artwork']['image']);
       <p class="hero__notice">
         <span><?= esc($hero['notice']['badge']) ?></span>
         <?= esc($hero['notice']['text']) ?>
-        <?php foreach ($hero['notice']['languages'] as $index => $language): ?>
-          <strong><?= esc($language) ?></strong><?= $index < count($hero['notice']['languages']) - 1 ? ' | ' : '' ?>
+        <?php foreach ($hero['notice']['languages'] as $index => $language): ?><span class="hero__notice-lang"><strong><?= esc($language) ?></strong><?= $index < count($hero['notice']['languages']) - 1 ? '<span class="hero__notice-sep" aria-hidden="true"> |</span>' : '' ?></span>
         <?php endforeach; ?>
       </p>
     </div>

@@ -2,6 +2,7 @@
   height: 405px;
   padding: 84px 0 0;
   background: var(--color-page);
+  overflow: hidden;
 }
 
 .why__grid {
@@ -23,8 +24,16 @@
   z-index: 0;
   inset: -80px;
   background:
-    radial-gradient(ellipse 55% 60% at 35% 50%, rgba(232, 20, 76, 0.42) 0%, transparent 55%),
-    radial-gradient(ellipse 50% 60% at 74% 55%, rgba(110, 12, 140, 0.28) 0%, transparent 55%);
+    radial-gradient(
+      ellipse 55% 60% at 35% 50%,
+      rgba(232, 20, 76, 0.42) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse 50% 60% at 74% 55%,
+      rgba(110, 12, 140, 0.28) 0%,
+      transparent 55%
+    );
   -webkit-filter: blur(22px);
   filter: blur(22px);
   pointer-events: none;

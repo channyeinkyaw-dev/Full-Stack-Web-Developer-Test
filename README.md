@@ -108,7 +108,9 @@ gcloud run deploy ironpdf-landing \
 ```bash
 gcloud builds submit \
   --config cloudbuild.yaml \
-  --substitutions _SERVICE_NAME=ironpdf-landing,_REGION=asia-southeast1
+  --substitutions _SERVICE_NAME=ironpdf-landing,\
+                  _REGION=asia-southeast1,\
+                  _APP_BASE_URL=https://ironpdf-landing-abc123-uc.a.run.app
 ```
 
 Connect your repository to a Cloud Build trigger to deploy automatically on every push to `main`.

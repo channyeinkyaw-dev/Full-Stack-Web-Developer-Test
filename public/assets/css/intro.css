@@ -4,9 +4,9 @@
   height: 538px;
   padding: 96px 0 0;
   background: var(--color-hero);
+  overflow: hidden;
 }
 
-/* Dark lower band — "Descriptions" area (274px from bottom) */
 .intro::before {
   content: "";
   position: absolute;
@@ -18,7 +18,6 @@
   background: rgba(23, 6, 23, 0.3);
 }
 
-/* Decorative gradient glow */
 .intro::after {
   content: "";
   position: absolute;
@@ -84,17 +83,14 @@
   white-space: nowrap;
 }
 
-/* Divider between items */
 .intro__bullets li + li {
   border-left: 1px solid #402640;
 }
 
-/* First item: right-side padding only — flush with container left edge */
 .intro__bullets li:first-child {
   padding-left: 0;
 }
 
-/* Last item: left-side padding only — flush with container right edge */
 .intro__bullets li:last-child {
   padding-right: 0;
 }
