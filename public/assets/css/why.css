@@ -5,28 +5,50 @@
 }
 
 .why__grid {
-  display: grid;
-  grid-template-columns: 380px minmax(0, 1fr);
-  align-items: start;
-  gap: 54px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  gap: 52px;
 }
 
 .why__media {
   position: relative;
-  justify-self: start;
+  flex: 0 0 auto;
+}
+
+.why__media::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: -80px;
+  background:
+    radial-gradient(ellipse 55% 60% at 35% 50%, rgba(232, 20, 76, 0.42) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 60% at 74% 55%, rgba(110, 12, 140, 0.28) 0%, transparent 55%);
+  -webkit-filter: blur(22px);
+  filter: blur(22px);
+  pointer-events: none;
 }
 
 .why__media img {
   display: block;
-  width: 380px;
+  position: relative;
+  z-index: 1;
+  width: 270px;
+  max-width: 100%;
   margin: 0;
+}
+
+.why__content {
+  flex: 1 1 0;
+  min-width: 0;
 }
 
 .why__content h2 {
   margin: 0 0 22px;
   color: var(--color-ink);
   font-size: 40px;
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: 0;
   line-height: 1.2;
 }

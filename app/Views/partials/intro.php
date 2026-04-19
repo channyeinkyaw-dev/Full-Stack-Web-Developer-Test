@@ -19,7 +19,7 @@
 
     <div class="intro__body">
       <?php foreach ($intro['paragraphs'] as $paragraph): ?>
-        <p><?= esc($paragraph) ?></p>
+        <p><?= $paragraph ?></p>
       <?php endforeach; ?>
     </div>
   </div>

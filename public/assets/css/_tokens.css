@@ -14,8 +14,10 @@
   --color-field: #ffffff;
   --color-field-text: #431f43;
 
-  --font-display: "Gotham", "Montserrat", "Avenir Next", "Segoe UI", Arial, sans-serif;
-  --font-body: "Gotham", "Montserrat", "Avenir Next", "Segoe UI", Arial, sans-serif;
+  --font-display:
+    "Gotham", "Montserrat", "Avenir Next", "Segoe UI", Arial, sans-serif;
+  --font-body:
+    "Gotham", "Montserrat", "Avenir Next", "Segoe UI", Arial, sans-serif;
 
   --container: 1170px;
   --header-height: 40px;

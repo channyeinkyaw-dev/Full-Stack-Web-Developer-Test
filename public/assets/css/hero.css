@@ -9,7 +9,7 @@
   position: absolute;
   top: 0px;
   right: 0;
-  width: 800px;
+  width: 780px;
   height: auto;
   z-index: 5;
   pointer-events: none;
@@ -77,7 +77,7 @@
   margin: 0;
   color: var(--color-ink);
   font-size: 50px;
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: 0;
   line-height: 54px;
 }
@@ -88,9 +88,9 @@
 }
 
 .hero__status {
-  margin: 18px 0 0;
-  color: var(--color-soft);
-  font-size: 16px;
+  margin: 8px 0 0;
+  color: var(--color-panel);
+  font-size: 14px;
   font-weight: 300;
   letter-spacing: 0;
 }
@@ -100,9 +100,19 @@
   z-index: 3;
   height: 328px;
   margin-top: 0;
-  background: #8E608E;
-  background: -webkit-linear-gradient(left, #8E608E 28.16%, #402640 67.82%, #371A34 83.75%);
-  background: linear-gradient(90deg, #8E608E 28.16%, #402640 67.82%, #371A34 83.75%);
+  background: #8e608e;
+  background: -webkit-linear-gradient(
+    left,
+    #8e608e 28.16%,
+    #402640 67.82%,
+    #371a34 83.75%
+  );
+  background: linear-gradient(
+    90deg,
+    #8e608e 28.16%,
+    #402640 67.82%,
+    #371a34 83.75%
+  );
 }
 
 .hero__signup-inner {
@@ -117,17 +127,17 @@
 .hero__signup-copy h2 {
   margin: 0 0 2px;
   color: var(--color-ink);
-  font-size: 34px;
-  font-weight: 900;
+  font-size: 40px;
+  font-weight: 700;
   letter-spacing: 0;
-  line-height: 48px;
+  line-height: 44px;
 }
 
 .hero__signup-copy p {
   margin: 0 0 20px;
   color: var(--color-ink);
   font-size: 18px;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0;
 }
 
@@ -138,7 +148,7 @@
   gap: 0 10px;
   margin: 38px 0 0;
   color: #eadbea;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 300;
   letter-spacing: 0;
 }
@@ -146,17 +156,16 @@
 .hero__notice span {
   display: inline-flex;
   align-items: center;
-  min-height: 32px;
-  padding: 0 25px;
+  min-height: 36px;
+  padding: 2px 18px;
   border-radius: 999px;
-  background: #d8bed8;
+  background: #c6aac6;
   color: var(--color-panel);
   font-size: 14px;
-  font-weight: 900;
-  letter-spacing: 1px;
+  font-weight: 700;
 }
 
 .hero__notice strong {
   color: var(--color-ink);
-  font-weight: 900;
+  font-weight: 500;
 }

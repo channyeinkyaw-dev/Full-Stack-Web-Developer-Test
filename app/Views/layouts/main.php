@@ -49,8 +49,11 @@ $heroImage   = base_url($content['hero']['artwork']['image'] ?? '');
 
   <meta name="theme-color" content="#2C0F29">
 
-  <!-- Favicon -->
-  <link rel="icon" href="<?= base_url('favicon.ico') ?>" sizes="any">
+  <!-- Favicons -->
+  <link rel="icon"             href="<?= base_url('favicon.ico') ?>"            sizes="any">
+  <link rel="icon"             href="<?= base_url('favicon-32x32.png') ?>"      type="image/png" sizes="32x32">
+  <link rel="icon"             href="<?= base_url('favicon-16x16.png') ?>"      type="image/png" sizes="16x16">
+  <link rel="apple-touch-icon" href="<?= base_url('apple-touch-icon.png') ?>"   sizes="180x180">
 
   <!-- Preload LCP hero image -->
   <?php if ($heroImage !== ''): ?>

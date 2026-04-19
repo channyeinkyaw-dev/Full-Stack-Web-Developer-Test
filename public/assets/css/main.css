@@ -132,7 +132,7 @@ input {
 }
 
 .signup-form__input::placeholder {
-  color: var(--color-field-text);
+  color: #181818;
   opacity: 1;
 }
 
@@ -151,8 +151,7 @@ input {
   background: var(--color-accent);
   color: var(--color-ink);
   font-size: 14px;
-  font-weight: 800;
-  letter-spacing: 1px;
+  font-weight: 700;
   cursor: pointer;
   -webkit-transition:
     background-color 180ms ease,

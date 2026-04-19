@@ -1,0 +1,28 @@
+# Dependencies (installed inside the image via composer stage)
+vendor/
+_vendor/
+
+# Local environment — secrets are injected via Cloud Run env vars
+.env
+
+# Dev/test artefacts
+tests/
+docs/
+*.xml.dist
+phpunit
+results/
+writable/cache/*
+writable/logs/*
+writable/session/*
+
+# VCS and IDE
+.git/
+.gitignore
+.idea/
+.vscode/
+.DS_Store
+
+# Docker files (no need to copy into image)
+Dockerfile
+.dockerignore
+cloudbuild.yaml

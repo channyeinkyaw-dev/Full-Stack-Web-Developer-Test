@@ -63,7 +63,7 @@
     ]
   },
   "why": {
-    "image": "/assets/img/html-to-pdf.png",
+    "image": "/assets/img/html-to-pdf.svg",
     "imageAlt": "HTML document converting to a PDF document",
     "imageWidth": 616,
     "imageHeight": 432,

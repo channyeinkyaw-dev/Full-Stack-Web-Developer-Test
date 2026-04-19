@@ -15,7 +15,7 @@
   right: 0;
   bottom: 0;
   height: 274px;
-  background: rgba(23, 6, 23, 0.30);
+  background: rgba(23, 6, 23, 0.3);
 }
 
 /* Decorative gradient glow */
@@ -29,7 +29,7 @@
   transform: translateX(-50%);
   width: 1184px;
   height: 343px;
-  background: linear-gradient(144.39deg, #E01A59 -32.66%, #460A48 71.03%);
+  background: linear-gradient(144.39deg, #e01a59 -32.66%, #460a48 71.03%);
   opacity: 0.3;
   -webkit-filter: blur(80px);
   filter: blur(80px);
@@ -50,19 +50,17 @@
   margin: 0 auto 55px;
   color: var(--color-ink);
   font-size: 40px;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1.2;
   text-align: center;
 }
 
 .intro__badge {
   position: absolute;
-  right: -90px;
-  top: -48px;
+  right: -75px;
+  top: -45px;
   width: 116px;
   height: 116px;
-  transform: rotate(-15deg);
-  box-shadow: 0px 10px 30px 0px rgba(24, 24, 24, 0.20);
   border-radius: 50%;
 }
 
@@ -77,18 +75,18 @@
 .intro__bullets li {
   display: flex;
   align-items: center;
-  padding: 0 16px;
+  padding: 0 26px;
   color: #eadbea;
   font-size: 16px;
   font-weight: 300;
   letter-spacing: 0;
-  line-height: 28px;
+  line-height: 26px;
   white-space: nowrap;
 }
 
 /* Divider between items */
 .intro__bullets li + li {
-  border-left: 1px solid rgba(143, 97, 143, 0.48);
+  border-left: 1px solid #402640;
 }
 
 /* First item: right-side padding only — flush with container left edge */
@@ -104,7 +102,7 @@
 .intro__bullets span {
   margin-right: 10px;
   color: var(--color-ink);
-  font-weight: 300;
+  font-weight: 700;
 }
 
 .intro__body {
@@ -126,5 +124,5 @@
 
 .intro__body strong {
   color: var(--color-ink);
-  font-weight: 800;
+  font-weight: 700;
 }

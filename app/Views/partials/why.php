@@ -4,8 +4,6 @@
     <div class="why__media">
       <img src="<?= base_url($why['image']) ?>"
            alt="<?= esc($why['imageAlt']) ?>"
-           width="<?= (int) $why['imageWidth'] ?>"
-           height="<?= (int) $why['imageHeight'] ?>"
            loading="lazy"
            decoding="async">
     </div>

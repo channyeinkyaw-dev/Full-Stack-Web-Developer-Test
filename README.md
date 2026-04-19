@@ -87,6 +87,41 @@ php spark routes
 composer test
 ```
 
+## Deploy to Google Cloud Run
+
+### Prerequisites
+
+- [Google Cloud SDK](https://cloud.google.com/sdk/docs/install) installed and authenticated
+- A GCP project with Cloud Run and Cloud Build APIs enabled
+
+### One-command deploy (source → Cloud Run)
+
+```bash
+gcloud run deploy ironpdf-landing \
+  --source . \
+  --region asia-southeast1 \
+  --allow-unauthenticated
+```
+
+### Via Cloud Build (CI/CD pipeline)
+
+```bash
+gcloud builds submit \
+  --config cloudbuild.yaml \
+  --substitutions _SERVICE_NAME=ironpdf-landing,_REGION=asia-southeast1
+```
+
+Connect your repository to a Cloud Build trigger to deploy automatically on every push to `main`.
+
+### Local Docker test
+
+```bash
+docker build -t ironpdf-landing .
+docker run -p 8080:8080 ironpdf-landing
+```
+
+Then open `http://localhost:8080`.
+
 ## Implementation Notes
 
 - The homepage content is data-driven through `app/Data/content.json` to satisfy the simulated data-source requirement.
